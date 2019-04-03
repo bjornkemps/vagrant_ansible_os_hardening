@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - ansible-os-hardening
+    - ansible-ssh-hardening
+  vars:
+    ssh_permit_root_login: 'no'
